@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta name="description" content="description">
+        <meta name="keywords" content="keywords">
+        <meta name="author" content="Alf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>The Demonlist</title>
+        <link rel="icon" href="img/icon.png">
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <div>
+                <img src="img/icon.png" alt="icon">
+
+            </div>
+            <ul>
+            <li><img src="img/list.png" alt="LIST" onclick="window.location.href = 'index.html'"></li>
+            <li><img src="img/stats.png" alt="STATS" onclick="window.location.href = 'stats.html'"></li>
+            <li><img src="img/user.png" alt="USER" onclick="window.location.href = 'user.html'"></li>
+            </ul>
+        </div>
+
+        <div id="copied">
+            ID COPIED TO CLIPBOARD
+        </div>
+
+        <img src="img/logo.png" alt="The Demonlist" class="logo">
+
+        <ul class="list-navbar">
+            <li><img src="img/main-list.png" alt="main-list" onclick="showList(mainList)"></li>
+            <li><img src="img/extended-list.png" alt="extended-list" onclick="showList(extendedList)"></li>
+            <li><img src="img/legacy-list.png" alt="legacy-list" onclick="showList(legacyList)"></li>
+        </ul>
+
+        <div class="search-bar">
+            <input type="text" name="Search Bar" id="search-bar" placeholder="Search for a Level or Author" onkeyup="search()">
+            <img src="img/search.png" onclick="(console.log('this does nothing lol'))">
+        </div>
+
+        <div class="list main" id="main"></div>
+
+        <div class="list extended" id="extended"></div>
+
+        <div class="list legacy" id="legacy"></div>
+
+        <script src="js/list.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
