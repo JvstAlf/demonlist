@@ -10,9 +10,15 @@
         <link rel="stylesheet" href="css/style.css">
         <title>The Demonlist</title>
         <link rel="icon" href="img/icon.png">
+        <link rel="preload" href="../../js/list-page.js" as="script">
     </head>
 
     <body>
+
+        <div class="loading" id="loading">
+            <img src="img/icon.png">
+            <p>loading...</p>
+        </div>
 
         <div class="navbar">
             <div>
@@ -51,6 +57,16 @@
 
         <script src="js/list.js"></script>
         <script src="js/script.js"></script>
+
+        <script>
+            document.body.style.overflow = 'hidden'
+
+            let loading = document.getElementById('loading')
+            setTimeout(() => {
+                loading.style.display = 'none'
+                document.body.style.overflow = 'auto'
+            }, 1500);
+        </script>
 
     </body>
 </html>

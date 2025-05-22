@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <meta name="description" content="description">
+        <meta name="keywords" content="keywords">
+        <meta name="author" content="Alf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/style.css">
+        <title>&#8203;</title>
+        <link rel="icon" href="../../img/icon.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <div>
+                <img src="../../img/icon.png" alt="icon">
+
+            </div>
+            <ul>
+            <li><img src="../../img/list.png" alt="LIST" onclick="window.location.href = '../../index.html'"></li>
+            <li><img src="../../img/stats.png" alt="STATS" onclick="window.location.href = '../../stats.html'"></li>
+            <li><img src="../../img/user.png" alt="USER" onclick="window.location.href = '../../user.html'"></li>
+            </ul>
+        </div>
+
+        <div id="copied">
+            ID COPIED TO CLIPBOARD
+        </div>
+
+        <div id="level-info3" class="demon"></div>
+
+        <script src="../../js/list-page.js"></script>
+        <script src="../../js/script.js"></script>
+
+        <script>
+            async function title() {
+                const responseTop75 = await fetch("https://pointercrate.com/api/v2/demons/listed/?limit=75");
+                const top75 = await responseTop75.json();
+                document.title = top75[2].name
+            }
+
+            title()
+        </script>
+
+    </body>
+
+    </html>

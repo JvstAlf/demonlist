@@ -31,16 +31,16 @@
             ID COPIED TO CLIPBOARD
         </div>
 
-        <div id="level-info2" class="demon"></div>
+        <div id="level-info76" class="demon"></div>
 
         <script src="../../js/list-page.js"></script>
         <script src="../../js/script.js"></script>
 
         <script>
             async function title() {
-                const responseTop75 = await fetch("https://pointercrate.com/api/v2/demons/listed/?limit=75");
-                const top75 = await responseTop75.json();
-                document.title = top75[1].name
+                const responseTop150 = await fetch("https://pointercrate.com/api/v2/demons/listed?after=75&limit=75")
+                const top150 = await responseTop150.json();
+                document.title = top150[0].name
             }
 
             title()

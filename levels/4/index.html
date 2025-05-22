@@ -31,7 +31,7 @@
             ID COPIED TO CLIPBOARD
         </div>
 
-        <div id="level-info2" class="demon"></div>
+        <div id="level-info4" class="demon"></div>
 
         <script src="../../js/list-page.js"></script>
         <script src="../../js/script.js"></script>
@@ -40,7 +40,7 @@
             async function title() {
                 const responseTop75 = await fetch("https://pointercrate.com/api/v2/demons/listed/?limit=75");
                 const top75 = await responseTop75.json();
-                document.title = top75[1].name
+                document.title = top75[3].name
             }
 
             title()
